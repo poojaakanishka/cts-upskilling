@@ -8,3 +8,32 @@ Task:
 • Add outline to highlight selected fields in a form
 • Compare visibility: hidden vs. display: none
 */
+
+.eventCard {
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 15px;
+    background-color: #f4f4f4;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid blue;
+}
+
+
+.hidden-box {
+    visibility: hidden;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 10px;
+}
+
+.none-box {
+    display: none;
+    border: 1px solid green;
+    padding: 10px;
+    margin: 10px;
+}
