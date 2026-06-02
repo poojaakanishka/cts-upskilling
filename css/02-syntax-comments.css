@@ -12,3 +12,36 @@ background-color: #007BFF;
 color: white;
 }
 */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+/* Style for Main Heading */
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+/* Style for Paragraph Text */
+p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Style for Main CTA Button */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover Effect for CTA Button */
+.cta-button:hover {
+    background-color: #0056b3;
+}
