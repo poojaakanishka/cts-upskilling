@@ -8,3 +8,14 @@ column-count: 2;
 column-gap: 30px;
 column-rule: 1px solid gray;
 */
+
+.news-article {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+
+    padding: 20px;
+    margin: 20px;
+    text-align: justify;
+    line-height: 1.6;
+}
