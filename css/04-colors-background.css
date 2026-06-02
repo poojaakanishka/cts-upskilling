@@ -7,7 +7,7 @@ Task:
 • Add a background image to the body with fallback color
 • Apply gradients to section headers using background: linear-gradient(...)
 */
-/* Body Background with Fallback Color and Image */
+
 body {
     background-color: #dfe6e9;
     background-image: url('background.jpg');
@@ -15,7 +15,6 @@ body {
     background-repeat: no-repeat;
 }
 
-/* HEX Color */
 h1 {
     color: #003366;
 }
