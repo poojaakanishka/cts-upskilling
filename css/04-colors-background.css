@@ -7,3 +7,27 @@ Task:
 • Add a background image to the body with fallback color
 • Apply gradients to section headers using background: linear-gradient(...)
 */
+/* Body Background with Fallback Color and Image */
+body {
+    background-color: #dfe6e9;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* HEX Color */
+h1 {
+    color: #003366;
+}
+
+.section-header {
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+    padding: 15px;
+}
+
+.event-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #222222;
+    padding: 20px;
+}
