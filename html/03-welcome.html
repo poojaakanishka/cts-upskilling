@@ -7,3 +7,45 @@ Task:
 • Use inline styles for a special offer <span> (e.g., color red, bold)
 • Apply the .highlight class to certain elements for visual emphasis
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Banner</title>
+
+    <style>
+        #welcomeBanner {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="welcomeBanner">
+        <h1>Welcome Back, User!</h1>
+        <p class="highlight">You have successfully logged in.</p>
+    </div>
+
+    <p>
+        Don't miss our
+        <span style="color: red; font-weight: bold;">
+            Special Offer: 50% OFF!
+        </span>
+    </p>
+
+    <p class="highlight">
+        Limited-time deal. Shop now!
+    </p>
+
+</body>
+</html>
