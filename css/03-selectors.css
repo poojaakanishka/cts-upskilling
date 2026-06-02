@@ -10,3 +10,68 @@ o ID selector #mainHeader for the banner
 o Class selector .eventCard for event containers
 o Grouping selector for h3, p to style together
 */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selectors Playground</title>
+
+    <style>
+        /* Universal Selector - Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Element Selector - Style all h2 elements */
+        h2 {
+            color: darkblue;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* ID Selector - Main Header Banner */
+        #mainHeader {
+            background-color: navy;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Class Selector - Event Cards */
+        .eventCard {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 8px;
+        }
+
+        /* Grouping Selector - Style h3 and p Together */
+        h3, p {
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mainHeader">
+        <h1>Community Events</h1>
+    </div>
+
+    <h2>Upcoming Events</h2>
+
+    <div class="eventCard">
+        <h3>Sports Day</h3>
+        <p>Join us for exciting sports activities.</p>
+    </div>
+
+    <div class="eventCard">
+        <h3>Cultural Fest</h3>
+        <p>Enjoy music, dance, and entertainment programs.</p>
+    </div>
+
+</body>
+</html>
