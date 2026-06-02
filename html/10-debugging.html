@@ -7,3 +7,45 @@ Task:
 • Use the Console tab to view logs from your <script>
 • Add breakpoints in JS and reload the page to watch variable values
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chrome DevTools Debugging Demo</title>
+
+    <style>
+        .box {
+            width: 300px;
+            padding: 20px;
+            margin: 50px auto;
+            text-align: center;
+            background-color: lightblue;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Debugging Demo</h2>
+        <button onclick="calculate()">Click Me</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculate() {
+            let a = 10;
+            let b = 20;
+            let sum = a + b;
+
+            console.log("Value of a:", a);
+            console.log("Value of b:", b);
+            console.log("Sum:", sum);
+
+            document.getElementById("result").innerHTML =
+                "Sum = " + sum;
+        }
+    </script>
+
+</body>
+</html>
