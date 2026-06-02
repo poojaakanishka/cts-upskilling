@@ -9,3 +9,103 @@ Task:
 • Display a confirmation message using <output> when the form is submitted
 • Style the form using CSS
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 400px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        output {
+            display: block;
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Event Registration Form</h2>
+
+        <form onsubmit="showMessage(event)">
+            
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name" required autofocus>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Event Date:</label>
+            <input type="date" required>
+
+            <label>Event Type:</label>
+            <select required>
+                <option value="">Select Event</option>
+                <option>Sports Day</option>
+                <option>Cultural Fest</option>
+                <option>Workshop</option>
+                <option>Community Meeting</option>
+            </select>
+
+            <label>Message:</label>
+            <textarea rows="4" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Register</button>
+
+            <output id="result"></output>
+
+        </form>
+    </div>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            document.getElementById("result").value =
+                "Registration Successful! Thank you for registering.";
+        }
+    </script>
+
+</body>
+</html>
