@@ -9,3 +9,152 @@ Task:
 • ondblclick on an image to enlarge it
 • Capture key events in the feedback textarea and count characters
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Feedback Form</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    img {
+        width: 200px;
+        height: 150px;
+        display: block;
+        margin: 10px auto;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #fee, #phoneMsg, #charCount {
+        font-weight: bold;
+        color: green;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Event Feedback Form</h2>
+
+    <!-- Phone Validation using onblur -->
+    <label>Phone Number:</label>
+    <input type="text" id="phone" onblur="validatePhone()">
+    <p id="phoneMsg"></p>
+
+    <!-- onchange Event -->
+    <label>Select Event:</label>
+    <select id="event" onchange="showFee()">
+        <option value="">Choose Event</option>
+        <option value="100">Sports Day</option>
+        <option value="200">Cultural Fest</option>
+        <option value="300">Workshop</option>
+    </select>
+    <p id="fee"></p>
+
+    <!-- ondblclick Event -->
+    <img src="https://via.placeholder.com/200x150"
+         alt="Event Image"
+         id="eventImg"
+         ondblclick="enlargeImage()">
+
+    <!-- Key Events -->
+    <label>Feedback:</label>
+    <textarea id="feedback" rows="4"
+              onkeyup="countChars()"
+              placeholder="Enter your feedback"></textarea>
+
+    <p id="charCount">Characters: 0</p>
+
+    <!-- onclick Event -->
+    <button onclick="submitForm()">Submit Feedback</button>
+
+    <p id="confirmation"></p>
+</div>
+
+<script>
+    // onblur
+    function validatePhone() {
+        let phone = document.getElementById("phone").value;
+        let msg = document.getElementById("phoneMsg");
+
+        if (phone.length === 10 && !isNaN(phone)) {
+            msg.innerHTML = "Valid Phone Number";
+            msg.style.color = "green";
+        } else {
+            msg.innerHTML = "Enter a valid 10-digit phone number";
+            msg.style.color = "red";
+        }
+    }
+
+    // onchange
+    function showFee() {
+        let fee = document.getElementById("event").value;
+        document.getElementById("fee").innerHTML =
+            "Event Fee: ₹" + fee;
+    }
+
+    // onclick
+    function submitForm() {
+        document.getElementById("confirmation").innerHTML =
+            "Feedback Submitted Successfully!";
+    }
+
+    // ondblclick
+    function enlargeImage() {
+        let img = document.getElementById("eventImg");
+
+        if (img.style.width === "400px") {
+            img.style.width = "200px";
+            img.style.height = "150px";
+        } else {
+            img.style.width = "400px";
+            img.style.height = "300px";
+        }
+    }
+
+    // key events
+    function countChars() {
+        let count =
+            document.getElementById("feedback").value.length;
+
+        document.getElementById("charCount").innerHTML =
+            "Characters: " + count;
+    }
+</script>
+
+</body>
+</html>
