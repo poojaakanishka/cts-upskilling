@@ -7,3 +7,13 @@ o Create a class named HelloWorld.
 o Implement the main method.
 o Use System.out.println() to display the message.
 */
+
+
+public class HelloWorld {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello, World!");
+
+    }
+}
