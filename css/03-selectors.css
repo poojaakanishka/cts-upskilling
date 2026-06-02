@@ -39,7 +39,6 @@ o Grouping selector for h3, p to style together
             text-align: center;
         }
 
-        /* Class Selector - Event Cards */
         .eventCard {
             background-color: #f4f4f4;
             border: 1px solid #ccc;
@@ -47,8 +46,7 @@ o Grouping selector for h3, p to style together
             margin: 15px;
             border-radius: 8px;
         }
-
-        /* Grouping Selector - Style h3 and p Together */
+        
         h3, p {
             color: #333;
             font-family: Arial, sans-serif;
