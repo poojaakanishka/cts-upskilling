@@ -7,3 +7,34 @@ o Define a module-info.java file in both modules.
 o Export a utility class from com.utils and use it in com.greetings.
 o Compile and run using the module path.
 */
+
+module com.utils {
+    exports com.utils;
+}
+
+
+package com.utils;
+
+public class Util {
+    public static String getMessage(String name) {
+        return "Hello " + name + " from com.utils module";
+    }
+}
+
+
+module com.greetings {
+    requires com.utils;
+}
+
+
+package com.greetings;
+
+import com.utils.Util;
+
+public class Main {
+    public static void main(String[] args) {
+
+        String msg = Util.getMessage("Kani");
+        System.out.println(msg);
+    }
+}
