@@ -7,3 +7,14 @@ o Write a simple Java program and compile it.
 o Open the .class file in a decompiler.
 o Analyze the decompiled source.
 */
+public class Demo {
+
+    public void showMessage() {
+        System.out.println("Hello from compiled class!");
+    }
+
+    public static void main(String[] args) {
+        Demo d = new Demo();
+        d.showMessage();
+    }
+}
